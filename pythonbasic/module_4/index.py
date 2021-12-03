@@ -32,4 +32,4 @@ for index, user in enumerate(users):
                         #     users.remove(users[index])
                         # except:
                         #     continue
-print(users_wrong_password)
+print(best_occupation)
