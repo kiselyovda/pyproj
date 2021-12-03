@@ -6,10 +6,7 @@ from dataset import users, countries
 
 users_wrong_password = []
 girls_drivers = []
-best_occupation = {
-    'occupation': '',
-    'salary': 0
-}
+best_occupation = {}
 max_salary = 0
 fef = {}
 remove = []
