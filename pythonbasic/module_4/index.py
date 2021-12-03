@@ -15,10 +15,7 @@ fef = {}
 remove = []
 for index, user in enumerate(users):
     if user.get('password').isdigit():
-        users_wrong_password.append({
-            'name': user['name'],
-            'mail': user['mail']
-        })
+        users_wrong_password.append({'name': user['name'], 'mail': user['mail']})
     if user.get('friends'):
         for friend in user.get('friends'):
             if friend.get('cars') and friend.get('sex') == 'F':
