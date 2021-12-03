@@ -14,7 +14,7 @@ max_salary = 0
 fef = {}
 remove = []
 for index, user in enumerate(users):
-    if user.get('password').isdigit():
+    if user['password'].isdigit():
         users_wrong_password.append({'name': user['name'], 'mail': user['mail']})
     if user.get('friends'):
         for friend in user.get('friends'):
@@ -30,7 +30,9 @@ for index, user in enumerate(users):
             if friend.get('flights'):
                 for flight in friend['flights']:
                     if flight['country'] in countries:
-                        try:
-                            users.remove(users[index])
-                        except:
-                            continue
+                        pass
+                        # try:
+                        #     users.remove(users[index])
+                        # except:
+                        #     continue
+print(users_wrong_password)
