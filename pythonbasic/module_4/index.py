@@ -14,7 +14,7 @@ max_salary = 0
 fef = {}
 remove = []
 for index, user in enumerate(users):
-    if not user.get('password').isdigit():
+    if user.get('password').isdigit():
         users_wrong_password.append({
             'name': user['name'],
             'mail': user['mail']
