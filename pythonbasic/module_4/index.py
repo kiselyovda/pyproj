@@ -8,8 +8,7 @@ users_wrong_password = []
 girls_drivers = []
 best_occupation = {}
 max_salary = 0
-fef = {}
-remove = []
+vip_uer = ''
 for index, user in enumerate(users):
     if user['password'].isdigit():
         users_wrong_password.append({'name': user['name'], 'mail': user['mail']})
@@ -19,8 +18,10 @@ for index, user in enumerate(users):
                 girls_drivers.append(friend.get('name'))
             if friend.get('job'):
                 if friend['job']['salary'] > max_salary:
+                    max_salary = friend['job']['salary']
                     best_occupation['occupation'] = friend['job']['occupation']
                     best_occupation['salary'] = friend['job']['salary']
+                    vip_uer = friend['name']
             if friend.get('cars'):
                 if friend.get('flights'):
                     avg_flights = round(len(friend['cars']) / len(friend['flights']), 5)
@@ -28,8 +29,4 @@ for index, user in enumerate(users):
                 for flight in friend['flights']:
                     if flight['country'] in countries:
                         pass
-                        # try:
-                        #     users.remove(users[index])
-                        # except:
-                        #     continue
 print(best_occupation)
